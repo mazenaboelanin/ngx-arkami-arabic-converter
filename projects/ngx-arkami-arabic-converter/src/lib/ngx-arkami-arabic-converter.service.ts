@@ -11,8 +11,6 @@ export class NgxArkamiArabicConverterService {
   private millions = ['', 'مليون', 'مليونان', 'ثلاثة ملايين', 'أربعة ملايين', 'خمسة ملايين', 'ستة ملايين', 'سبعة ملايين', 'ثمانية ملايين', 'تسعة ملايين'];
   private teens = ['', 'أحد عشر', 'اثنا عشر', 'ثلاثة عشر', 'أربعة عشر', 'خمسة عشر', 'ستة عشر', 'سبعة عشر', 'ثمانية عشر', 'تسعة عشر'];
 
-constructor() { }
-
 convertToArabicWords(strNumber: string): string {
   let result = '';
   let length = strNumber.length;
