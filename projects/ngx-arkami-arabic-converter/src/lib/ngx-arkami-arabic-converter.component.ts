@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgxArkamiArabicConverterService } from 'ngx-arkami-arabic-converter';
+import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.service';
 
 @Component({
   selector: 'ngx-arkami-arabic-converter',
