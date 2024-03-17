@@ -1,6 +1,22 @@
 {
   "name": "ngx-arkami-arabic-converter",
   "version": "0.0.1",
+  "description": "An Angular library that takes a string number as a value and returns the arabic text representation of that number",
+  "author": {
+    "name": "Mazen Abo ELanin",
+    "email": "mazenaboelanin@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mazenaboelanin/ngx-arkami-arabic-converter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazenaboelanin/ngx-arkami-arabic-converter"
+  },
+  "keywords": [
+    "angular",
+    "arabic words",
+    "arabic number converter"
+  ],
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/core": "^16.1.0"
