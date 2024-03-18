@@ -14,6 +14,8 @@ npm i ngx-arkami-arabic-converter
 
 ## Usage
 
+### first Approach: using Service
+
 ```javascript
   // import NgxArkamiArabicConverterService in your component
   import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.service';
@@ -26,6 +28,28 @@ npm i ngx-arkami-arabic-converter
   // Use `convertToArabicWords` method and pass the string number to it
   // It will return the text representation
   const arabicTextRepresentation = this.ngxArkamiService.convertToArabicWords(stringNumber);
+```
+
+###  Second Approach: using Component
+#### import NgxArkamiArabicConverterModule in `app.module.ts`
+```javascript
+  // import `NgxArkamiArabicConverterModule` in your app.module
+  import { NgxArkamiArabicConverterModule } from './ngx-arkami-arabic-converter.service';
+
+  // add `NgxArkamiArabicConverterModule` to your imports 
+  @NgModule({
+  imports: [
+    NgxArkamiArabicConverterModule
+  ]
+  })
+```
+#### use ngx-arkami-arabic-converter component to render output
+
+```html
+  <!-- use ngx-arkami-arabic-converter component in your html file --> 
+  <!-- pass the string number you want to convert to arabic text representation -->
+  <!-- the component will display the arabic text representation for you -->
+  <ngx-arkami-arabic-converter [strNumber]="inputNumber"></ngx-arkami-arabic-converter>
 ```
 
 ## Build
