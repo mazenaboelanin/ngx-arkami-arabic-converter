@@ -27,11 +27,6 @@ npm i ngx-arkami-arabic-converter
   this.formattedNumber = this.ngxArkamiService.convertToArabicWords(this.form.value.number);
 ```
 
-## Future Plan
-
-- A proper Documentation
-- A proper unit tests
-
 ## Build
 
 Run `ng build ngx-arkami-arabic-converter` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -44,3 +39,8 @@ After building your library with `ng build ngx-arkami-arabic-converter`, go to t
 
 Run `ng test ngx-arkami-arabic-converter` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+
+## Future Plan
+
+- A proper Documentation
+- A proper unit tests
