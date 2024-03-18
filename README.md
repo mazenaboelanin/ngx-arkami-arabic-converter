@@ -23,8 +23,9 @@ npm i ngx-arkami-arabic-converter
       private ngxArkamiService: NgxArkamiArabicConverterService
     ) {}
 
-  // use `convertToArabicWords` method and pass the string number to it and it will return the text representation
-  this.formattedNumber = this.ngxArkamiService.convertToArabicWords(this.form.value.number);
+  // Use `convertToArabicWords` method and pass the string number to it
+  // It will return the text representation
+  this.formattedNumber = this.ngxArkamiService.convertToArabicWords(stringNumber);
 ```
 
 ## Build
