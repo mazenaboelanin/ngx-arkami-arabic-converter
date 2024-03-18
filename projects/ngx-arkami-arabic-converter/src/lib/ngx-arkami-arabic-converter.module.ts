@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { NgxArkamiArabicConverterComponent } from './ngx-arkami-arabic-converter.component';
 import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.service';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -12,6 +13,7 @@ import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.s
     NgxArkamiArabicConverterService
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     NgxArkamiArabicConverterComponent

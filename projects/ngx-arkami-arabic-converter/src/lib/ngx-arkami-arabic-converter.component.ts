@@ -1,17 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.service';
 
 @Component({
   selector: 'ngx-arkami-arabic-converter',
   template: `
-    <p>
+    <p *ngIf="arabicText">
       {{ arabicText }}
     </p>
   `,
   styles: [
   ]
 })
-export class NgxArkamiArabicConverterComponent implements OnInit{
+export class NgxArkamiArabicConverterComponent implements OnInit, OnChanges{
   @Input() strNumber: string = '';
   arabicText: string = '';
 
@@ -20,7 +20,15 @@ export class NgxArkamiArabicConverterComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
-    this.arabicText = this.ngxArkamiService.convertToArabicWords(this.strNumber);
+    if (this.strNumber){
+      this.arabicText = this.ngxArkamiService.convertToArabicWords(this.strNumber);
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['strNumber']) {
+      this.arabicText = this.ngxArkamiService.convertToArabicWords(this.strNumber);
+    }
   }
 
 
