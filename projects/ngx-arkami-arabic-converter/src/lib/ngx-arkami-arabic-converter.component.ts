@@ -4,7 +4,7 @@ import { NgxArkamiArabicConverterService } from './ngx-arkami-arabic-converter.s
 @Component({
   selector: 'ngx-arkami-arabic-converter',
   template: `
-    <p *ngIf="arabicText">
+    <p>
       {{ arabicText }}
     </p>
   `,
@@ -16,11 +16,11 @@ export class NgxArkamiArabicConverterComponent implements OnInit{
   arabicText: string = '';
 
   constructor(
-    private strNumberService: NgxArkamiArabicConverterService
+    private ngxArkamiService: NgxArkamiArabicConverterService
   ) { }
 
   ngOnInit(): void {
-    this.arabicText = this.strNumberService.convertToArabicWords(this.strNumber);
+    this.arabicText = this.ngxArkamiService.convertToArabicWords(this.strNumber);
   }
 
 
